@@ -13,15 +13,15 @@ import { Button } from "./ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { LogOut } from "lucide-react";
 import NavItems from "./NavItems";
+import { signOut } from "@/lib/actions/auth.actions";
 
-const UserDropDown = () => {
+const UserDropDown = ({ user }: { user: User }) => {
   const router = useRouter();
 
   const handleSignOut = async () => {
+    await signOut();
     router.push("/sign-in");
   };
-
-  const user = { name: "John", email: "abc@xyz.com" };
 
   return (
     <DropdownMenu>
@@ -31,7 +31,7 @@ const UserDropDown = () => {
           className="flex items-center gap-3 text-gray-400 hover:text-yellow-500"
         >
           <Avatar className="size-8">
-            <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+            {/* <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" /> */}
             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
               {user.name[0]}
             </AvatarFallback>

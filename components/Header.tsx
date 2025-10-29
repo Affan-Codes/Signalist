@@ -3,26 +3,26 @@ import Link from "next/link";
 import NavItems from "./NavItems";
 import UserDropdown from "./UserDropDown";
 
-const Header = () => {
+const Header = ({ user }: { user: User }) => {
   return (
     <header className="sticky top-0 header">
       <div className="container header-wrapper">
         <Link href="/" className="flex items-center justify-center gap-4">
           <Image
             src="/assets/icons/logo.png"
-            alt="Stockify logo"
+            alt="Signalist logo"
             width={32}
             height={32}
             className="cursor-pointer"
           />
-          <span className="font-bold text-white text-3xl">Stockify</span>
+          <span className="font-bold text-white text-3xl">Signalist</span>
         </Link>
 
         <nav className="hidden sm:block">
           <NavItems />
         </nav>
 
-        <UserDropdown />
+        <UserDropdown user={user} />
       </div>
     </header>
   );
