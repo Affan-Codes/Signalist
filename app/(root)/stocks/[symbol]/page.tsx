@@ -8,10 +8,14 @@ import {
   COMPANY_PROFILE_WIDGET_CONFIG,
   COMPANY_FINANCIALS_WIDGET_CONFIG,
 } from "@/lib/constants";
+import { isInWatchlist } from "@/lib/actions/watchlist.actions";
 
 export default async function StockDetails({ params }: StockDetailsPageProps) {
   const { symbol } = await params;
   const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
+
+  // Check if stock is in watchlist
+  const inWatchlist = await isInWatchlist(symbol);
 
   return (
     <div className="flex min-h-screen p-4 md:p-6 lg:p-8">
@@ -45,7 +49,7 @@ export default async function StockDetails({ params }: StockDetailsPageProps) {
             <WatchlistButton
               symbol={symbol.toUpperCase()}
               company={symbol.toUpperCase()}
-              isInWatchlist={false}
+              isInWatchlist={inWatchlist}
             />
           </div>
 
