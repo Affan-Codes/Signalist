@@ -1,6 +1,6 @@
 # 📈 Signalist
 
-**Signalist** is an AI-powered stock signal and analytics platform built with **Next.js 15**, **TypeScript**, and **modern web technologies**.  
+**Signalist** is an AI-powered stock signal and analytics platform built with **Next.js 16**, **TypeScript**, and **modern web technologies**.  
 It enables users to track stocks, analyze signals, and manage personalized watchlists with real-time updates and secure authentication.
 
 ## 🚀 Features
@@ -16,11 +16,11 @@ It enables users to track stocks, analyze signals, and manage personalized watch
 
 ## 🛠️ Tech Stack
 
-- **Framework:** Next.js 15 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** TailwindCSS + Shadcn UI
 - **Database:** Prisma ORM (PostgreSQL or similar)
-- **Auth:** Clerk / NextAuth (based on environment setup)
+- **Auth:** Better-Auth (based on environment setup)
 - **Linting & Formatting:** ESLint + Prettier
 - **Build Tool:** Turbopack / Next.js Dev Server
 
