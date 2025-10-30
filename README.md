@@ -19,7 +19,7 @@ It enables users to track stocks, analyze signals, and manage personalized watch
 - **Framework:** Next.js 16 (App Router)
 - **Language:** TypeScript
 - **Styling:** TailwindCSS + Shadcn UI
-- **Database:** Prisma ORM (PostgreSQL or similar)
+- **Database:** Mongoose ORM (MongoDB or similar)
 - **Auth:** Better-Auth (based on environment setup)
 - **Linting & Formatting:** ESLint + Prettier
 - **Build Tool:** Turbopack / Next.js Dev Server
