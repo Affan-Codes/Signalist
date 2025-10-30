@@ -5,6 +5,8 @@ import { searchStocks } from "@/lib/actions/finnhub.actions";
 import WatchlistTable from "@/components/WatchlistTable";
 import WatchlistNews from "@/components/WatchlistNews";
 
+export const dynamic = "force-dynamic";
+
 export default async function WatchlistPage() {
   const watchlist = await getWatchlistWithData();
   const initialStocks = await searchStocks();

@@ -10,6 +10,8 @@ import {
 } from "@/lib/constants";
 import { isInWatchlist } from "@/lib/actions/watchlist.actions";
 
+export const dynamic = "force-dynamic";
+
 export default async function StockDetails({ params }: StockDetailsPageProps) {
   const { symbol } = await params;
   const scriptUrl = `https://s3.tradingview.com/external-embedding/embed-widget-`;
